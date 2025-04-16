@@ -41,7 +41,7 @@ API_KEY=your_api_key_here
 4. Place the CSV file in the `data/` directory:
 ```bash
 mkdir -p data
-mv jp_vs_cn.csv.csv data/comments.csv
+mv jp_vs_cn.csv data/comments.csv
 ```
 
 ## Usage
