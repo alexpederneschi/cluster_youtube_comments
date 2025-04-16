@@ -10,6 +10,8 @@ This set of scripts:
 - Visualizes vector embeddings using dimensionality reduction techniques
 - Clusters the reviews and provides description/category for each cluster
 
+**Note:** This project uses DeepSeek to generate cluster descriptions. You will need a valid API key to access their service — see the .env setup in the Setup section below.
+
 ## Data Source
 
 The project uses YouTube comment data from the [Peterson-Newman Interview: 50K YT Comments](https://www.kaggle.com/datasets/kanchana1990/peterson-newman-interview-50k-yt-comments) on Kaggle.
