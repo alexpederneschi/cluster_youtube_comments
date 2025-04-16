@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    image: cluster_yt_comments-img
+    container_name: cluster_yt_comment-cnt
+    working_dir: /code
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/code
+      - ~/models/sentence-transformers:/root/.cache/huggingface/hub
