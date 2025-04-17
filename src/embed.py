@@ -2,16 +2,15 @@
 Uses the sentence-transformers library to embed text.
 Defaults to using stdin and stdout.
 """
-
-import sys
+import argparse
 import json
 import logging
-import numpy as np
-import argparse
-from sentence_transformers import SentenceTransformer
-from tqdm import tqdm
+import sys
 
-# log to stderr
+from tqdm import tqdm
+import numpy as np
+from sentence_transformers import SentenceTransformer
+
 logging.basicConfig(stream=sys.stderr)
 logger = logging.getLogger("embed")
 

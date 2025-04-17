@@ -8,7 +8,7 @@ This set of scripts:
 
 - Creates embeddings from YouTube comments (see below)
 - Visualizes vector embeddings using dimensionality reduction techniques
-- Clusters the reviews and provides description/category for each cluster
+- Clusters the comments and provides description/category for each cluster
 
 **Note:** This project uses DeepSeek to generate cluster descriptions. You will need a valid API key to access their service — see the .env setup in the Setup section below.
 
@@ -67,17 +67,17 @@ python src/cluster.py --input data/comments.embed.json --output output/clusters.
   Handles emojis and sampling
 - src/embed.py
 
-  Embeds summary text
+  Embeds comment text
 - src/visualize.py
 
   Visualizes vector embeddings using dimensionality reduction techniques
 - src/cluster.py
 
-  Clusters reviews and provides descriptions/categories of each cluster
+  Clusters comments and provides descriptions/categories for each cluster
 
 ## Requirements
 
-- Docker and Docker Compose installed on your system 
+- Docker and Docker Compose installed on your system
 
 ## License
 

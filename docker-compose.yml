@@ -2,7 +2,7 @@ services:
   app:
     build: .
     image: cluster_yt_comments-img
-    container_name: cluster_yt_comment-cnt
+    container_name: cluster_yt_comments-cnt
     working_dir: /code
     tty: true
     stdin_open: true

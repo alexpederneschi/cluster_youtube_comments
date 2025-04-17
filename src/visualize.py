@@ -16,14 +16,14 @@ import warnings
 
 from tqdm import tqdm
 import numpy as np
-import matplotlib.pyplot as plt
+import pandas as pd
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
-from umap import UMAP
 from sklearn.cluster import KMeans
+from umap import UMAP
+import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 from matplotlib.colors import Normalize
-import pandas as pd
 
 logging.basicConfig(level=logging.INFO, stream=sys.stderr)
 logger = logging.getLogger("visualize")
@@ -178,7 +178,6 @@ def plot_embeddings(embeddings, metadata, method, n_clusters, color_by, figsize=
     # Apply dimensionality reduction with timing
     start_time = time.time()
     
-
     if method == 'pca':
         reducer = PCA(n_components=2, random_state=42)
         embedding_2d = reducer.fit_transform(sampled_embeddings)

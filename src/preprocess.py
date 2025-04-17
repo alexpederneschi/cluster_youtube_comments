@@ -2,8 +2,8 @@
 Handles emojis and sampling
 """
 import argparse
-import sys
 import logging
+import sys
 from functools import partial
 
 import pandas as pd
@@ -17,7 +17,6 @@ DEAFULT_SAMPLE_SIZE = 0   # No sampling
 
 def handle_emojis(text, mode='keep'):
     """Process emojis in text (keep/convert/remove)"""
-
     if mode == 'convert':    
         return emoji.demojize(text)
     elif mode == 'remove':

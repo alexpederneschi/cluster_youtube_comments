@@ -6,7 +6,6 @@ import logging
 import sys
 import pandas as pd
 
-# log to stderr
 logging.basicConfig(level=logging.INFO, stream=sys.stderr)
 logger = logging.getLogger("tojson")
 
@@ -23,7 +22,6 @@ def main():
 
     df = pd.read_csv(args.input)
     df.to_json(args.output, orient="records", lines=True, force_ascii=False)
-
 
 if __name__ == "__main__":
     main()

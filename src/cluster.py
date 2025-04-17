@@ -12,11 +12,11 @@ import os
 import re
 from typing import List, Dict, Any
 
+from dotenv import load_dotenv, find_dotenv
+from tqdm import tqdm
 import faiss
 import numpy as np
 import openai
-from dotenv import load_dotenv, find_dotenv
-from tqdm import tqdm
 
 logging.basicConfig(stream=sys.stderr, level=logging.INFO)
 logger = logging.getLogger("cluster")
@@ -86,7 +86,6 @@ Provide your response in json format as in this example:
     )
     return response.choices[0].message.content
 
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=argparse.FileType("r"), default=sys.stdin, help="Path to the input file")
@@ -143,7 +142,6 @@ def main():
             "category": cluster_json["category"],
         }
         args.output.write(json.dumps(cluster_info, ensure_ascii=False) + "\n")
-
 
 if __name__ == "__main__":
     main()
